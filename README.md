@@ -1,3 +1,3 @@
-# goit-markup-hw-05
+# goit-markup-hw-06
 
-**Homework 4 - Positioned Items**
+**Homework 6 - Elements of Forms**

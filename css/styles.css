@@ -5,6 +5,7 @@
     --SLATE: #434455;
     --LIGHT-SLATE: #8E8F99;
     --OCEAN: #404BBF;
+    --DAIRY: #fcfcfc;
 }
 
 h1 {
@@ -89,6 +90,126 @@ h3 {
     background-color: white;
     border-radius: 4px;
     padding: 24px;
+    background: var(--DAIRY);
+}
+
+.modal-text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.service-label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+    width: 100%;
+    position: relative;
+    font-size: 12px;
+    color: var(--LIGHT-SLATE);
+}
+
+.input-label {
+    text-align: left;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.service-input {
+    padding: 12px 40px;
+    border: 1px solid var(--NAVY-BLUE);
+    border-radius: 4px;
+    transition: 250ms;
+    transition-property: color,border-color, background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-icon {
+    position: absolute;
+    top: 55%;
+    left: 15px;
+    fill: black;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-input:focus + .service-icon, 
+.service-input:hover + .service-icon {
+    fill: var(--IRIS);
+}
+
+.service-input:hover {
+    border: 1px solid var(--IRIS);
+}
+
+.service-input-textarea {
+    width: 360px;
+    height: 120px;
+    padding: 8px 16px;
+    border: 1px solid var(--NAVY-BLUE);
+    border-radius: 4px;
+    transition: 250ms;
+    transition-property: color, border-color, background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-agree {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 16px;
+    margin-bottom: 16px;    
+}
+
+.agree-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 23px;
+    opacity: 0;
+    cursor: pointer;
+    margin-left: 0;
+}
+
+.agree-check-icon {
+    fill: none;
+    border: 1px solid black;
+    border-radius: 2px;
+    transition: 250ms;
+    transition-property: border-color, background-color, fill;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    margin-right: 8px;
+    margin-left: 0;
+}
+
+.service-agree .agree-checkbox:focus + .agree-check-icon,
+.service-agree .agree-checkbox:checked:focus + .agree-check-icon {
+    outline: 2px solid #212121;
+}
+
+.service-agree .agree-checkbox:checked + .agree-check-icon {
+    background-color: var(--IRIS);
+    border-color: var(--IRIS);
+    fill: white;
+    outline: none;
+    stroke: white;
+    stroke-width: 0.2;
+}
+
+.agree-text {
+    font-size: 12px;
+}
+
+.modal-send {
+    margin-bottom: 24px;
+    padding: 16px 32px;
+    cursor: pointer;
+    background-color: var(--IRIS);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 4px;
+    border-color: transparent;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .is-hidden {
@@ -116,10 +237,6 @@ h3 {
     border: 1px solid currentColor;
 }
 
-a {
-    text-decoration: none;
-}
-
 .list {
     color: var(--SLATE);
     font-weight: 700;
@@ -129,6 +246,7 @@ a {
 
 .link {
     color: var(--SLATE);
+    text-decoration: none;
 }
 
 .active {
@@ -342,7 +460,35 @@ footer {
     padding-left: 156px;
     padding-top: 101.5px;
     display: flex;
-    gap: 160px;
+    gap: 120px;
+}
+
+.subscribe-form {
+    width: 264px;
+    padding: 8px;
+    border: 2px solid white;
+    background: none;
+    border-radius: 4px;
+}
+
+.subscribe-form::placeholder {
+    color: white;
+    font-size: 12px;
+}
+
+.subscribe-btn {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    height: 40px;
+    color: white;
+    fill: white;
+    padding: 8px 24px;
+    border-radius: 4px;
+    background: var(--IRIS, #4D5AE5);
+    border: 1px solid var(--IRIS);
+    gap: 16px;
+    margin-left: 20px;
 }
 
 footer .logo  {
